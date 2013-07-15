@@ -4,6 +4,18 @@ namespace ob=ompl::base;
 namespace og=ompl::geometric;
 
 bool isStateValid(const ob::State *state){};
+/*
+class myStateValidityCheckerClass: public base::StateValidityChecker{
+	public:
+		myStateValidityCheckerClass(const base::SpaceInformationPtr &si):
+			base::StateValidityChecker(si){
+				}
+	virtual bool isValid(const base::State *state)const
+		{ return ...;
+			}
+};*/
+
+bool my
 
 void plainWithSimpleSetup(void){
 	ob::StateSpacePtr space(new ob:: SE3StateSpace()); //constructing the state space we are planning in
