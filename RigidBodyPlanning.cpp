@@ -23,9 +23,7 @@ bool isStateValid(const ob::State *state)
        return (void*)rot != (void*)pos;
 }
 
-class PlanningClass{  
- public: 
-   static void plan(void)
+ plan(void)
     {
         // construct the state space we are planning in
         ob::StateSpacePtr space(new ob::SE3StateSpace());
@@ -88,11 +86,9 @@ class PlanningClass{
        }
        else
            std::cout << "No solution found" << std::endl;
-   }};
+   }
    
-   class PlanningWithSS{
-	public:  
-	 static void planWithSimpleSetup(void)
+   void planWithSimpleSetup(void)
    {
        // construct the state space we are planning in
        ob::StateSpacePtr space(new ob::SE3StateSpace());
@@ -137,15 +133,15 @@ class PlanningClass{
        else
            std::cout << "No solution found" << std::endl;
    }
-   };
+
    int main()
    {
        
-      	PlanningClass::plan();
+       plan();
    
        std::cout << std::endl << std::endl;
    
-       PlanningWithSS::planWithSimpleSetup();
+       planWithSimpleSetup();
    
        return 0;
    }
