@@ -23,7 +23,7 @@ bool isStateValid(const ob::State *state)
        return (void*)rot != (void*)pos;
 }
 
- plan(void)
+void plan(void)
     {
         // construct the state space we are planning in
         ob::StateSpacePtr space(new ob::SE3StateSpace());
